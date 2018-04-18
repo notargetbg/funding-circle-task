@@ -91,3 +91,22 @@ h1, h2, p {
     position: relative;
     top: 8px;
 }
+
+@media all and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .player {
+        font-size: 16px;
+    }
+
+    .game-title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .delete-icon {
+        opacity: 1;
+    }
+}
