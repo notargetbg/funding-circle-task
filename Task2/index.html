@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Task 1</title>
+    <title>Task 2</title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
     
@@ -19,7 +19,7 @@
                 <div class="game-list-item">
                     <div class="game-title">
                         <div class="player player-home winner">
-                            <img src="img/player.png" class="player-thumb" alt="">
+                            <img src="img/player.png" class="player-thumb">
                             <span class="player-name">
                                 Sarah Vanderou
                             </span>
@@ -31,7 +31,7 @@
                             <span class="player-name">
                                 Jason Nort
                             </span>
-                            <img src="img/player.png" class="player-thumb" alt="">
+                            <img src="img/player.png" class="player-thumb">
                         </div>
                     </div>
                     <div class="game-sets">
@@ -48,7 +48,7 @@
                 <div class="game-list-item">
                     <div class="game-title">
                         <div class="player player-home">
-                            <img src="img/player.png" class="player-thumb" alt="">
+                            <img src="img/player.png" class="player-thumb">
                             <span class="player-name">
                                 Oronzo Gallo
                             </span>
@@ -60,7 +60,7 @@
                             <span class="player-name">
                                 Leo Matic
                             </span>
-                            <img src="img/player.png" class="player-thumb" alt="">
+                            <img src="img/player.png" class="player-thumb">
                         </div>
                     </div>
                     <div class="game-sets">
@@ -74,7 +74,7 @@
                 <div class="game-list-item">
                     <div class="game-title">
                         <div class="player player-home">
-                            <img src="img/player.png" class="player-thumb" alt="">
+                            <img src="img/player.png" class="player-thumb">
                             <span class="player-name">
                                 Nicole C. Lewis
                             </span>
@@ -86,7 +86,7 @@
                             <span class="player-name">
                                 Feng Yang
                             </span>
-                            <img src="img/player.png" class="player-thumb" alt="">
+                            <img src="img/player.png" class="player-thumb">
                         </div>
                     </div>
                     <div class="game-sets">
@@ -99,8 +99,27 @@
                
             </div>
         </div>
+
+        <div class="game-component game-adder">
+            <h2 class="game-header">Add games</h2>
+
+            <form data-add-game>
+                <div class="players-selection">
+                    <select class="player-selection">
+                        <option disabled selected>Choose a player</option>
+                    </select> 
+                    <span class="selection-separator">
+                        vs
+                    </span>
+                    <select class="player-selection">
+                        <option disabled selected>Choose a player</option>
+                    </select>
+                </div>
+                <button class="game-adder-btn" type="submit">Add Game</button>
+            </form>
+        </div>
     </div>
 
-    <script src="component.js"></script>
+    <script src="dist/scripts.min.js"></script>
 </body>
 </html>
