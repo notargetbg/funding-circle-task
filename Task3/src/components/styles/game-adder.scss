@@ -1,0 +1,36 @@
+@import './colors.scss';
+
+.game-adder {
+    height: 400px;    
+
+    .player-selection {
+        padding: 8px 10px;
+        color: $dark-gray;
+    }
+    
+    .selection-separator {
+        margin: 0 15px;
+        font-size: 18px;
+    }
+
+    .game-adder-btn {
+        cursor: pointer;
+        padding: 10px 20px;
+        margin: 30px 0;
+        background: $main;
+        color: $white;
+        border: 1px solid $main;
+        transition: all .3s ease;
+
+        &:hover, &:active {
+            color: $main;
+            background: $white;
+        }
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .game-adder {
+        height: auto;
+    }
+}

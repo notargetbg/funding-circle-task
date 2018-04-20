@@ -1,0 +1,77 @@
+@import './colors.scss';
+
+.game-list-item {
+    position: relative;
+    margin: 20px 10px;
+    background: $transparent-gray;
+    padding: 10px;
+}
+
+.player {
+    flex: 4;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+}
+
+.game-score {
+    flex: 1;
+}
+
+.player-thumb {
+    border-radius: 100px;
+    max-width: 25px;
+    max-height: 25px;
+    flex: 2;
+    margin: 0 10px;
+}
+
+.game-sets {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.game-set:not(:last-of-type) {
+    margin-right: 4px;
+    border-right: 2px solid $light-gray;
+    padding-right: 6px;
+}
+
+.delete-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    max-width: 20px;
+    opacity: .8;
+    transition: opacity .3s ease;
+}
+
+.delete-icon:hover {
+    opacity: 1;
+}
+
+.winner:first-of-type:before, .winner:last-of-type:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 20px;
+    background: $green;
+    position: relative;
+    top: 8px;
+}
+
+@media all and (max-width: 768px) {
+    .player {
+        font-size: 16px;
+    }
+
+    .game-title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .delete-icon {
+        opacity: 1;
+    }
+}

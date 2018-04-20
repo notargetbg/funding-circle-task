@@ -1,0 +1,56 @@
+@import './game-table.scss';
+@import './game-adder.scss';
+@import './colors.scss';
+
+body * {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+h1, h2, p {
+    margin: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    display: flex;
+    margin: auto;
+}
+
+.game-component {
+    max-width: 640px;
+    flex: 1;
+    padding: 10px;
+    margin: 40px 20px;
+    border: 1px solid $light-gray;
+    text-align: center;
+
+    .game-header {
+        margin: 20px 0;
+        font-size: 26px;
+    }
+
+    .game-title {
+        display: flex;
+        align-content: space-around;
+        font-size: 22px;
+        line-height: 25px;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .game-component {
+        margin: 10px auto;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .container {
+        padding: 10px 20px;
+    }
+}
