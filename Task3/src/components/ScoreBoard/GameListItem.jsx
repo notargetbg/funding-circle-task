@@ -1,5 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
+import playerThumb from '../../img/player.png';
+import deleteIcon from '../../img/trash-icon.png';
 
 class GameListItem extends React.Component {
     constructor() {
@@ -21,7 +23,7 @@ class GameListItem extends React.Component {
             <div className="game-list-item">
                 <div className="game-title">
                     <div className={classnames('player player-home', {'winner':isPlayer1Winner})}>
-                        <img src="img/player.png" className="player-thumb" />
+                        <img src={playerThumb} className="player-thumb" />
                         <span className="player-name">
                             {game.players[0]}
                         </span>
@@ -33,7 +35,7 @@ class GameListItem extends React.Component {
                         <span className="player-name">
                             {game.players[1]}
                         </span>
-                        <img src="img/player.png" className="player-thumb" />
+                        <img src={playerThumb} className="player-thumb" />
                     </div>
                 </div>
                 <div className="game-sets">
@@ -43,7 +45,7 @@ class GameListItem extends React.Component {
                         </span>
                     ))}
                 </div>
-                <img onClick={() => this.deleteItem(gameId)} src="img/trash-icon.png" className="delete-icon" alt="Trash icon" />
+                <img onClick={() => this.deleteItem(gameId)} src={deleteIcon} className="delete-icon" alt="Trash icon" />
             </div>
         )
     }
