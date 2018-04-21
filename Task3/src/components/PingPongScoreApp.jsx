@@ -4,13 +4,32 @@ import GameAdder from './GameAdder/GameAdder';
 import './styles/app.scss';
 
 class PingPongScoreApp extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			names: ["John", "Sarah", "Amber", "Seth", "Jin", "Bren", "Cathrin", "Nick"],
+			games: []
+		};
+		this.handleGameAdded = this.handleGameAdded.bind(this);
+		this.handleGameDeleted = this.handleGameDeleted.bind(this);
+	}
 
-	render() {	
+	handleGameAdded(game) {
+		this.setState({games: [...this.state.games, game]});
+	}
+
+	handleGameDeleted(id) {
+		this.setState({games: this.state.games.filter((game, index) => {
+			return index !== id;
+		})});
+	}
+		
+	render() {
 
 		return (
 			<div className='container'>
-				<ScoreBoard />
-				<GameAdder />
+				<ScoreBoard games={this.state.games} onGameDeleted={this.handleGameDeleted} />
+				<GameAdder onGameAdded={this.handleGameAdded} players={this.state.names} />
 			</div>
 		);
 	}
