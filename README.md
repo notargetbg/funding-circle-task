@@ -19,9 +19,9 @@ You can choose from the following names based on the default app *State*:
 `["John", "Sarah", "Amber", "Seth", "Jin", "Bren", "Cathrin", "Nick", "Elsa", "Margaret"]`
 
 #### You can see a working demo of the tasks here:
-- [Task1](http://funding-circle-task.designscaster.com/task1)
-- [Task2](http://funding-circle-task.designscaster.com/task2)
-- [Task3](http://funding-circle-task.designscaster.com/task3)
+- [Task1](http://fc-task.designscaster.com/task1)
+- [Task2](http://fc-task.designscaster.com/task2)
+- [Task3](http://fc-task.designscaster.com/task3)
 
 <hr>
 
