@@ -1,5 +1,6 @@
 import React from 'react';
 import * as GeneratorHelper from '../../helpers/ScoreGenerator';
+import AutoCompleteInput from './AutoCompleteInput';
 
 class GameAdder extends React.Component {
     constructor(props) {
@@ -13,12 +14,12 @@ class GameAdder extends React.Component {
         };
     }
 
-    handlePlayer1Change(e) {
-        this.setState({player1: e.target.value});
+    handlePlayer1Change(name) {
+        this.setState({player1: name});
     }
 
-    handlePlayer2Change(e) {
-        this.setState({player2: e.target.value});
+    handlePlayer2Change(name) {
+        this.setState({player2: name});
     }
 	
     handleSubmit(e) {
@@ -63,21 +64,11 @@ class GameAdder extends React.Component {
 
             <form data-add-game onSubmit={this.handleSubmit}>
                 <div className="players-selection">
-                    <select className="player-selection" onChange={this.handlePlayer1Change} defaultValue="Choose a player">
-                        <option disabled>Choose a player</option>
-                        {players.map((player, index) => (
-                            <option key={index} value={player}>{player}</option>
-                        ))}
-                    </select> 
+                    <AutoCompleteInput onPlayerAdded={this.handlePlayer1Change} words={players} />
                     <span className="selection-separator">
                         vs
                     </span>
-                    <select className="player-selection" onChange={this.handlePlayer2Change} defaultValue="Choose a player">
-                        <option disabled>Choose a player</option>
-                        {players.map((player, index) => (
-                            <option key={index} value={player}>{player}</option>
-                        ))}
-                    </select>
+                    <AutoCompleteInput onPlayerAdded={this.handlePlayer2Change} words={players} />                    
                 </div>
                 <button className="game-adder-btn" type="submit">Add Game</button>
             </form>

@@ -1,7 +1,13 @@
 @import './colors.scss';
 
 .game-adder {
-    height: 400px;    
+    height: 400px;  
+    
+    .players-selection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .player-selection {
         padding: 8px 10px;

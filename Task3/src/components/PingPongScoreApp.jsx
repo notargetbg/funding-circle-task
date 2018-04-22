@@ -1,14 +1,15 @@
 import React from 'react';
 import ScoreBoard from './ScoreBoard/ScoreBoard';
 import GameAdder from './GameAdder/GameAdder';
+import PreGeneratedData from '../helpers/PreGeneratedData.json';
 import './styles/app.scss';
 
 class PingPongScoreApp extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			names: ["John", "Sarah", "Amber", "Seth", "Jin", "Bren", "Cathrin", "Nick"],
-			games: []
+			names: ["John", "Sarah", "Amber", "Seth", "Jin", "Bren", "Cathrin", "Nick", "Elsa", "Margaret"],
+			games: PreGeneratedData
 		};
 		this.handleGameAdded = this.handleGameAdded.bind(this);
 		this.handleGameDeleted = this.handleGameDeleted.bind(this);
@@ -25,7 +26,6 @@ class PingPongScoreApp extends React.Component {
 	}
 		
 	render() {
-
 		return (
 			<div className='container'>
 				<ScoreBoard games={this.state.games} onGameDeleted={this.handleGameDeleted} />
