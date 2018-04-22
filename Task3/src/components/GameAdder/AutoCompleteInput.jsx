@@ -15,7 +15,11 @@ class AutoCompleteInput extends React.Component {
         const inputText = e.target.value.toLowerCase();
 
         if (inputText.length < 1) {
-            this.setState({suggestions: [], selectedWord: ''});
+            this.setState({
+                suggestions: [],
+                selectedWord: ''
+            });
+
             return;
         }
 
@@ -32,7 +36,15 @@ class AutoCompleteInput extends React.Component {
             suggestions: []
         });
 
-        this.props.onPlayerAdded(word);
+        this.props.onSelectedWord(word);
+    }    
+
+    clearState() {        
+        this.setState({
+            selectedWord: '',
+            suggestions: []
+        });
+        this.props.onSelectedWord('');
     }
 
     render() {

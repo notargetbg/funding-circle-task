@@ -4,7 +4,7 @@ import AutoCompleteInput from './AutoCompleteInput';
 
 class GameAdder extends React.Component {
     constructor(props) {
-		super(props);
+        super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handlePlayer1Change = this.handlePlayer1Change.bind(this);
         this.handlePlayer2Change = this.handlePlayer2Change.bind(this);
@@ -37,7 +37,9 @@ class GameAdder extends React.Component {
             totalScore: GeneratorHelper.calculateTotalScore(generatedSets),
             setsScore: generatedSets
         });
-    }
+        this.player1AutoComplete.clearState();
+        this.player2AutoComplete.clearState();
+    }    
 
     generateSets() {
         const setsPlayed = GeneratorHelper.getRandomIntInclusive(2, 5);
@@ -54,7 +56,7 @@ class GameAdder extends React.Component {
             }
         });
     }
-    
+
 	render() {	
         const { players } = this.props;
 
@@ -64,11 +66,11 @@ class GameAdder extends React.Component {
 
             <form data-add-game onSubmit={this.handleSubmit}>
                 <div className="players-selection">
-                    <AutoCompleteInput onPlayerAdded={this.handlePlayer1Change} words={players} />
+                    <AutoCompleteInput ref={(el) => {this.player1AutoComplete = el;}} onSelectedWord={this.handlePlayer1Change} words={players} />
                     <span className="selection-separator">
                         vs
                     </span>
-                    <AutoCompleteInput onPlayerAdded={this.handlePlayer2Change} words={players} />                    
+                    <AutoCompleteInput ref={(el) => {this.player2AutoComplete = el;}} onSelectedWord={this.handlePlayer2Change} words={players} />                    
                 </div>
                 <button className="game-adder-btn" type="submit">Add Game</button>
             </form>

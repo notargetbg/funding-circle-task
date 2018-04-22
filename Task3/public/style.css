@@ -1,0 +1,263 @@
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+button, hr, input {
+  overflow: visible; }
+
+progress, sub, sup {
+  vertical-align: baseline; }
+
+[type=checkbox], [type=radio], legend {
+  box-sizing: border-box;
+  padding: 0; }
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em; }
+
+a {
+  background-color: transparent; }
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted; }
+
+b, strong {
+  font-weight: bolder; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative; }
+
+sub {
+  bottom: -.25em; }
+
+sup {
+  top: -.5em; }
+
+img {
+  border-style: none; }
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0; }
+
+button, select {
+  text-transform: none; }
+
+[type=button], [type=reset], [type=submit], button {
+  -webkit-appearance: button; }
+
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
+  outline: ButtonText dotted 1px; }
+
+fieldset {
+  padding: .35em .75em .625em; }
+
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  white-space: normal; }
+
+textarea {
+  overflow: auto; }
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto; }
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px; }
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit; }
+
+details {
+  display: block; }
+
+summary {
+  display: list-item; }
+
+[hidden], template {
+  display: none; }
+
+.game-list-item {
+  position: relative;
+  margin: 20px 10px;
+  background: rgba(128, 128, 128, 0.1);
+  padding: 10px; }
+
+.player {
+  flex: 4;
+  font-size: 19px;
+  display: flex;
+  justify-content: center; }
+
+.game-score {
+  flex: 1; }
+
+.player-thumb {
+  border-radius: 100px;
+  max-width: 25px;
+  max-height: 25px;
+  flex: 2;
+  margin: 0 10px; }
+
+.game-sets {
+  margin: 10px 0;
+  font-weight: 700; }
+
+.game-set:not(:last-of-type) {
+  margin-right: 4px;
+  border-right: 2px solid #d4d4d4;
+  padding-right: 6px; }
+
+.delete-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  max-width: 20px;
+  opacity: .8;
+  transition: opacity .3s ease; }
+
+.delete-icon:hover {
+  opacity: 1; }
+
+.winner:first-of-type:before, .winner:last-of-type:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 20px;
+  background: #0eb30e;
+  position: relative;
+  top: 8px; }
+
+@media all and (max-width: 768px) {
+  .player {
+    font-size: 16px; }
+  .game-title {
+    font-size: 18px;
+    line-height: 22px; }
+  .delete-icon {
+    opacity: 1; } }
+
+.game-adder {
+  height: 400px; }
+  .game-adder .players-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .game-adder .player-selection {
+    padding: 8px 10px;
+    color: #505050; }
+  .game-adder .selection-separator {
+    margin: 0 15px;
+    font-size: 18px; }
+  .game-adder .game-adder-btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 30px 0;
+    background: #75a3ce;
+    color: #ffffff;
+    border: 1px solid #75a3ce;
+    transition: all .3s ease; }
+    .game-adder .game-adder-btn:hover, .game-adder .game-adder-btn:active {
+      color: #75a3ce;
+      background: #ffffff; }
+
+@media all and (max-width: 1200px) {
+  .game-adder {
+    height: auto; } }
+
+.autocomplete {
+  position: relative; }
+  .autocomplete .autocomplete-input {
+    padding: 8px 10px;
+    color: #505050;
+    position: relative;
+    z-index: 10; }
+  .autocomplete .autocomplete-suggestions {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 38px;
+    left: 0;
+    right: 0;
+    list-style: none; }
+  .autocomplete .autocomplete-suggestion {
+    padding: 8px 0;
+    background: #efefef; }
+    .autocomplete .autocomplete-suggestion:not(:last-of-type) {
+      border-bottom: 1px solid #d4d4d4; }
+    .autocomplete .autocomplete-suggestion:hover, .autocomplete .autocomplete-suggestion:active {
+      background: #d4d4d4; }
+
+body * {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box; }
+
+h1, h2, p {
+  margin: 10px 0; }
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  margin: auto; }
+
+.game-component {
+  max-width: 640px;
+  flex: 1;
+  padding: 10px;
+  margin: 40px 20px;
+  border: 1px solid #d4d4d4;
+  text-align: center; }
+  .game-component .game-header {
+    margin: 20px 0;
+    font-size: 26px; }
+  .game-component .game-title {
+    display: flex;
+    align-content: space-around;
+    font-size: 22px;
+    line-height: 25px; }
+
+@media all and (max-width: 1200px) {
+  .container {
+    flex-wrap: wrap;
+    flex-direction: column-reverse; }
+  .game-component {
+    margin: 10px auto;
+    width: 100%; } }
+
+@media all and (max-width: 768px) {
+  .container {
+    padding: 10px 20px; } }
